@@ -1,0 +1,5 @@
+env:
+  TERM: alacritty-direct
+
+key_bindings:
+  - { key: Home, chars: "\x1b\x20" }

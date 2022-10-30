@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+function ec() {
+  exec emacsclient -a '' -c -t "$@"
+}
+
+ec "$@"

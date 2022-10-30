@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+GIT_STATUS = `git status --porcelain=v1`.chomp;
+GIT_ROOT = `git rev-parse --show-toplevel`.chomp;
+
+for file_status in GIT_STATUS.split(/\n/)
+  status = file_status[0..2]
+  relative_file_path = file_status[3..]
+  file_path = "#{GIT_ROOT}/#{relative_file_path}"
+  file_name = File.basename(file_path)
+  # if status == "??"
+    # `git add \"#{file_path}\"`
+    # `git commit -m \"Initial commit of \'#{file_name}\'\"`
+  # else
+    # `git add \"#{file_path}\"`
+    # `git commit -m \"Updates to \'#{file_name}\'\"`
+  # end
+end
+
+#`git push origin`

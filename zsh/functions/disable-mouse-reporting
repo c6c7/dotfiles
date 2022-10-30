@@ -1,0 +1,7 @@
+#!/bin/zsh
+
+function disable-mouse-reporting() {
+  printf '\e[?1000l'
+}
+
+disable-mouse-reporting "$@"

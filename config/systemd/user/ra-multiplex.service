@@ -1,0 +1,9 @@
+[Unit]
+Description=Persistent ra-multiplex server
+
+[Service]
+ExecStart=%h/.cargo/bin/ra-multiplex-server
+Restart=always
+
+[Install]
+WantedBy=default.target

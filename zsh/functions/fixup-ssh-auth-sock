@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+fixup-ssh-auth-sock() {
+    local new_sock=$(echo /tmp/ssh-*/agent.*(=UNom[1]))
+    if [[ -n ${new_sock} ]]
+    then
+	export SSH_AUTH_SOCK=${new_sock}
+    fi
+}
+
+fixup-ssh-auth-sock
